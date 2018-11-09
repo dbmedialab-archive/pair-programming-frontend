@@ -1,0 +1,85 @@
+# Playground: http://wolverine-api.prod.medialaben.no/query
+
+# Query variables
+{"site": "www.seher.no", "path": "/emne/kongelig", "device": "mobile", "version": "1337"}
+
+# Query
+query pageQuery($site: String!, $path: String!, $device: String!, $version: String!) {
+	page(site: $site, path: $path, device: $device, version: $version) {
+		__typename
+		... on PageStructure {
+			head {
+				title
+      }
+			modules: children {
+				__typename
+				...FMain
+      }
+    }
+	}
+}
+
+fragment FMain on Main {
+	modules: children {
+		__typename
+		...FRow
+		... on Section {
+			className
+			modules: children {
+				__typename
+				...FRow
+				...FArticlePreview
+			}
+		}
+	}
+}
+
+fragment FArticlePreview on ArticlePreview {
+	heading
+	url
+	labels {
+		backgroundColor
+		textColor
+		text
+	}
+	deck
+	standFirst
+	image {
+		url
+		placeholder
+		aspectRatio
+		sources {
+			url
+			media
+		}
+	}
+	width
+	teaserTitle
+}
+
+
+
+fragment FRow on Row {
+	modules: children {
+		__typename
+		...FArticlePreview
+		... on Column {
+			modules: children {
+				__typename
+				...FArticlePreview
+				... on Row {
+					modules: children {
+						__typename
+						...FArticlePreview
+						... on Column {
+							modules: children {
+								__typename
+								...FArticlePreview
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
