@@ -7,9 +7,12 @@ En hvilken som helst react-applikasjon funker hvis vi kommer så langt - bruk et
 
 
 # Karusell
-1. Vi har fått et bilde og litt css fra designerne, se vedlagte karusell-mockup. Implementer denne skissa i shiny på raskest mulig måte.
+
+Journalistene skulle hatt dette i produksjon i går, men vi måtte hente i barnehagen. Nå har klokka alt blitt over 10. OMG.
+
+1. Vi har fått et bilde og litt css fra designerne, se vedlagte karusell-mockup. Implementer denne skissa i shiny.
 1. Lag en story for den nye komponenten i storybook.
-1. Nå har vi gjort ting fort. Er det noe vi burde refaktorere for å gjøre det "ordentlig"?
+1. Er det noe vi burde refaktorere for å gjøre det "ordentlig"?
 1. Legg til fokusstiler for tastatur-brukere. Skjul disse stilene for musebrukere.
 1. Legg til støtte for å kunne dynamisk endre utseende på komponenten avhengig av hvilket nettsted den brukes på.
 1. Sett opp en react-applikasjon som bruker vedlagte mock-data for å vise den nye komponenten vi har laget.
