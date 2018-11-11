@@ -1,4 +1,5 @@
-# Playground: http://wolverine-api.prod.medialaben.no/query
+# GraphQL endpoint: http://wolverine-api.prod.medialaben.no/query 
+# Playground: http://wolverine-api.prod.medialaben.no
 
 # Query variables
 {"site": "www.seher.no", "path": "/emne/kongelig", "device": "mobile", "version": "1337"}
